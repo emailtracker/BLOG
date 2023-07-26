@@ -1,9 +1,9 @@
 <?php $this->load->view('layout/header')?>
 
 
-<h1 class='text-center mt-3'>Welcome to Blogging zone</h1>
+<h1 class='text-center mt-3'></h1>
 
-<h3 class=' mt-3'>List Blogs</h3>
+<h3 class=' mt-3'>List data</h3>
 
 
 <div class="container" id='msgg'>
@@ -28,12 +28,12 @@
   <thead>
     <tr>
       <th scope="col">ID</th>
-      <th scope="col">Title</th>
-      <th scope="col">Description</th>
-      <th scope="col">Author</th>
-	  <th scope="col">Type</th>
+      <th scope="col">Name</th>
+      <th scope="col">Department</th>
+      <th scope="col">Age</th>
+	  <th scope="col">Salary</th>
 
-	  <th scope="col">Date</th>
+	  <!-- <th scope="col">Date</th> -->
 
 	  <th scope="col">Action</th>
 
@@ -44,11 +44,11 @@
 		<?php foreach ($input as $value):?>
 
     <tr>
-      <td><?php echo $value['blog_id'] ?></td>
-      <td><?php echo $value['title'] ?></td>
-      <td><?php echo $value['description'] ?></td>
-      <td><?php echo $value['author'] ?></td>
-	  <td><?php if( $value['type']=='featured'){
+      <td><?php echo $value['Employee_ID'] ?></td>
+      <td><?php echo $value['Name'] ?></td>
+      <td><?php echo $value['department'] ?></td>
+      <td><?php echo $value['Age'] ?></td>
+	  <!-- <td><?php if( $value['type']=='featured'){
 		echo 'Featured';
 	  } 
 	  elseif($value['type']=='promo'){
@@ -59,12 +59,13 @@
 		echo 'N/A';
 
 	  }
-	   ?></td>
+	   ?></td> -->
+	   <td><?php echo $value['Salary']?></td>
 
-	  <td><?php echo $value['created_at'] ?></td>
+	  <!-- <td><?php echo $value['created_at'] ?></td> -->
 	  <td>
-		<a href="<?= base_url()?>main/edit/<?= $value['blog_id']?>"><button  class="btn btn-success">Edit</button></a>
-		<a href="<?= base_url()?>main/delete/<?= $value['blog_id']?>"><button  class="btn btn-danger">Delete</button></a>
+		<a href="<?= base_url()?>main/edit_view/<?= $value['Employee_ID']?>"><button  class="btn btn-success">Edit</button></a>
+		<a href="<?= base_url()?>main/delete/<?= $value['Employee_ID']?>"><button  class="btn btn-danger">Delete</button></a>
 
 	  </td>
 

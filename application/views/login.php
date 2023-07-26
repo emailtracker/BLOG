@@ -36,6 +36,8 @@
   </div>
  
   <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+  <a href="<?= base_url('main/reg')?>">signup</a>
+ 
 </form>
 		</div>
 	</div>
